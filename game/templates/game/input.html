@@ -1,0 +1,15 @@
+{% extends "game/base.html" %}
+    {% block title %}input_value{% endblock %}
+    {% block content %}
+        <form action="Guess" method="post">
+            <label= for "Guess"> Guess a value:</label>
+            <input id="Guess" type="number" name="Guess">
+            <input type="submit" value="Submit"><br>
+            {% if Guess == 23 %}
+                Correct value
+            {% elif Guess > 23 %}
+                Your value is greater than the answer
+            {% else %}
+                Your value is less than the answer
+            {% endif %}
+    {% endblock %}
